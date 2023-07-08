@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="menu.js"></script>
+        <title>Buonus Bank</title>
+        <img class="logo1" src="assets/imagens/logo_BB.png" alt="logo">
+        <h1>Buonus Bank</h1>
+
+    </head>
+
+    <body>   
+    <!-- --------------------------------------------------Cabeçalho com informações do usuário -->
+        <header>
+            <div class="container-user"> 
+            <div class="container-dados">
+                <div class="user-inf">
+                <p class="user-name">João Silva</p>
+                <div class="banco-inf">
+                    <p class="banco-num">Número do Banco: 0999</p>
+                    <p class="conta-num">Número da Conta: 123456-7</p>
+                </div>
+                </div>
+                <div class="user-icon">
+                <i class="bi bi-person-circle"></i>
+                </div>
+            </div>
+            </div>
+        </header>
+
+    <!-- --------------------------------------------------Barra de navegação lateral -->
+            <div>
+                <nav class="menu-nav"> 
+                    <!-- div do botão de navegação  -->
+                        <div class="btn-nav">
+                            <i class="bi bi-list" id="btn-abrir"></i>
+                        </div>
+
+                        <!-- Criar a lista  -->
+                    <!-- Estrutura (clase -> icone -> texto) -->
+                    <ul>
+                        <!-- Icone Buscar -->
+                        <li class="item-menu">
+                            <a href="#">
+                                <span class="icon"><i class="bi bi-search"></i></span>
+                                <span class="txt-link">Buscar</span>
+                            </a>
+                        </li>
+                        <!-- Icone Interações -->
+                        <li class="item-menu">
+                            <a href="#">
+                                <span class="icon"><i class="bi bi-arrow-left-right"></i></span>
+                                <span class="txt-link">Interações</span>
+                            </a>
+                        </li>
+                        <!-- icone Início -->
+                        <li class="item-menu ativo">
+                            <a href="#">
+                            <span class="icon"><i class="bi bi-house"></i></span>
+                            <span class="txt-link">Início</span>
+                            </a>
+                        </li>
+                        <!-- Icone Negociações -->
+                        <li class="item-menu">
+                            <a href="#">
+                                <span class="icon"><i class="bi bi-briefcase"></i></span>
+                                <span class="txt-link">Negócios</span>
+                            </a>
+                        </li>
+                        <!-- Icone Usuário -->
+                        <li class="item-menu">
+                            <a href="#">
+                                <span class="icon"><i class="bi bi-person"></i></span>
+                                <span class="txt-link">Usuário</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Arquivo JavaScript para dar função ao botão de expansão da barra lateral -->
+                    <script src="menu.js"></script>
+
+                </nav>
+
+            </div>
+
+    <!-- --------------------------------------------------Copro principal da página -->
+
+            <!-- Tela de saldo -->
+            <section id="dashboard-saldo"> 
+                <div class="telasaldo">
+                    <h2>Seu saldo!</h2>
+                    <p>R$ 1,856,27</p>
+                        <div class="saldo">
+                            <span class="entradas">Entradas: R$ 3.082,70</span>
+                            <span class="iconsetacima"><i class="bi bi-arrow-up-circle"></i>
+                            <p></p><span class="saidas">Saídas: R$ 2.035,85</span>
+                            <span class="iconsetabaixo"><i class="bi bi-arrow-down-circle"></i>
+                        </div> 
+
+                </div>
+
+            
+            </section>
+
+
+            <!-- Tela de Finanças -->
+            <div class="dashboard-financas">
+                <h2>Minhas finanças</h2>
+                <!-- Quadrantes de dados  -->
+                <section id="quadrante1">
+                    <div class="box-financas">
+                        <div class="financas">
+                            <h3>Conta Corrente</h3>
+                            <p>Entradas: R$ <span id="val-entradas">1020,00</span></p>
+                            <p>Saídas: R$ <span id="val-saidas">842,00</span></p>
+                            <button class="btn-conta">Acessar conta</button>
+                        </div>
+                
+                        <div class="poupanca">
+                            <h3>Conta Poupança</h3>
+                            <p>Total: R$<span id="num-poupanca">258,23</span></p>
+                            <p>Rendimentos: R$ <span id="val-poupanca">9,35</span></p>
+                            <button class="btn-poupanca">Acessar poupança</button>
+                        </div>
+                
+                        <div class="investimentos">
+                            <h3>Investimentos</h3>
+                            <p>Você ainda não tem investimentos<span id="investimentos"></span></p>
+                            <button class="btn-investir">Invista agora</button>
+                        </div>
+                
+                        <div class="cartao">
+                            <h3>Cartão de Crédito</h3>
+                            <p>Fatura atual: R$<span id="val-fatura">297,80</span></p>
+                            <p>Vencimento: <span id="ven-cartao">15/08/2023</span></p>
+                            <p>Limite disponível: R$ <span id="val-limite">202,20</span></p>
+                            <button class="btn-cartoes">Meus cartões</button>
+                        </div>
+                
+                        <div class="historicos">
+                            <h3>Cartão de Crédito</h3>
+                            <p>Fatura atual: R$<span id="card-number">297,80</span></p>
+                            <p>Vencimento: <span id="card-expiry">15/08/2023</span></p>
+                            <p>Limite disponível: R$ <span id="card-balance">202,20</span></p>
+                            <button class="btn-historico">Compras</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- Tela de Empréstimo -->
+            <div class="dashboard-emprestimos">
+                <h2>Empréstimos</h2>
+                    <section id="quadrante1">
+                        <div class="box-emprestimos">
+                            
+                            <div class="emprestimos">
+                                <h3>Saldo disponível</h3>
+                                <p>Entradas: R$ <span id="val-saldo ">1.020,00</span></p>
+                                <button class="btn-conta">Acessar conta</button>
+                            </div>
+                    
+                            <div class="dividendos">
+                                <h3>Buonus</h3>
+                                <p>Total:<span id="num-dividendos">8</span></p>
+                                <button class="btn-poupanca">Acessar poupança</button>
+                            </div>
+                    
+                            <div class="emprestado">
+                                <h3>Valor cedido</h3>
+                                <p>Saldo comprometido: R$<span id="emprestar">222,00</span></p>
+                                <button class="btn-investir">Invista agora</button>
+                            </div>
+                    
+                            <div class="rentabilidade">
+                                <h3>Ganhos</h3>
+                                <p>Saldo atual: R$<span id="val-fatura">498,25</span></p>
+                                <p>Ganho total: R$<span id="ven-cartao">720,00</span></p>
+                                <button class="btn-cartoes">Meus cartões</button>
+                            </div>
+                    
+                            <div class="emprestar">
+                                <h3>Valor emprestado</h3>
+                                <p>Você ainda não fez nenhum empréstimo<span id="card-number"></span></p>
+                            <button class="btn-historico">Solicitar empréstimo</button>
+                        
+                        </div>
+                    </section>
+            </div>
+
+
+            <!-- Tela de Serviços -->
+            <div class="dashboard-servicos">
+                <h2>Serviços</h2>
+                <section>
+                <div class="icones-servicos">
+                    <div class="icone-servico">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <p class="descricao">Pagar</p>
+                    </div>
+                    <div class="icone-servico">
+                    <i class="bi bi-cart"></i>
+                    <p class="descricao">Compras</p>
+                    </div>
+                    <div class="icone-servico">
+                    <i class="bi bi-receipt"></i>
+                    <p class="descricao">Faturas</p>
+                    </div>
+                    <div class="icone-servico">
+                    <i class="bi bi-wallet2"></i>
+                    <p class="descricao">Carteira</p>
+                    </div>
+                    <div class="icone-servico">
+                    <i class="bi bi-airplane"></i>
+                    <p class="descricao">Viagens</p>
+                    </div>
+                    <div class="icone-servico">
+                    <i class="bi bi-headset"></i>
+                    <p class="descricao">Central de Ajuda</p>
+                    </div>
+                    <div class="icone-servico">
+                    <i class="bi bi-building"></i>
+                    <p class="descricao">Negócios</p>
+                    </div>
+                    <div class="icone-servico">
+                    <i class="bi bi-gear"></i>
+                    <p class="descricao">Configurações</p>
+                    </div>
+                </div>
+                </section>
+            </div>
+
+            
+        <!-- --------------------------------------------------Rodapé -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                <div class="bb-info">  
+                    <p class="bb-nome">Buonus Bank SA  </p>
+                    <p class="bb-cnpj">CNPJ: 01.234.5678/90</p>
+                    <div class="social-icones">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quem somos</h4>
+                    <ul>
+                    <li><a href="#">A instituição</a></li>
+                    <li><a href="#">Valores</a></li>
+                    <li><a href="#">Missão</a></li>
+                    <li><a href="#">Campanhas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ajuda</h4>
+                    <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Chat</a></li>
+                    <li><a href="#">Telefone</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Início</h4>
+                    <ul>
+                    <li><a href="#">Página Inicial</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Configurações</a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </footer>         
+
+    </body>
+
+</html>

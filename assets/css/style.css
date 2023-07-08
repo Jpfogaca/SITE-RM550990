@@ -1,0 +1,501 @@
+html {
+    font-family: 'Raleway', sans-serif;
+    background-color: #191919;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+    
+
+/* ------------------------------------------------------------Cabeçalho banco */
+h1 {
+    background: #000000;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(aqua, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+}
+
+.logo1 {
+    width: 80px;
+    height: 70px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;    
+    border-radius: 10px;
+}
+
+/* ------------------------------------------------------------Cabeçalho usuário */
+.user-icon {
+    font-size: 60px;
+}
+  
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.container-user {
+    max-width: 60%;
+    margin: auto;
+}
+    
+.container-dados{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-inf {
+    text-align: center;
+}
+    
+.user-name {
+    font-size: 25px;
+}
+    
+.banco-inf {
+    font-size: 15px;
+}
+    
+.user-icon {
+    margin-left: 10px;
+}
+    
+.banco-num,
+.conta-num {
+    margin-bottom: 0;
+}
+
+
+/* ------------------------------------------------------------Menu de navegação */
+nav.menu-nav {
+    width: 60px;
+    height: 100%;
+    background-color: #000000;
+    padding: 20px 0 40px 1%;
+    box-shadow: 2px 0 0 aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+  
+nav.menu-nav.abrir {
+    width: 300px;
+}
+
+/* Configurar botão menu */
+.btn-nav {
+    width: 100%;
+    padding: 10px;
+}
+
+.btn-nav i {
+    color: aqua;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Configurar itens do menu lateral */
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: .3s;
+}
+
+ul li.ativo {
+    background-color: aqua;
+    text-align: center;
+    margin-left: 15px;
+}
+
+ul li.item-menu:hover {
+    background: aqua;
+}
+
+ul li.item-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 40px 8%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+    align-items: center;
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 70px;
+    transition: .8s;
+    opacity: 0;
+}
+
+nav.menu-nav.abrir .txt-link {
+    margin-left: 40px;
+    opacity: 1;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 25px;
+}
+
+
+/* ------------------------------------------------------------Configurar a página inicial */
+
+/* Tela de saldo */
+.telasaldo {
+    background-color: #000000;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 50px 100px;
+    box-shadow: 0 2px 4px aqua;
+    text-align: center;
+}
+
+.telasaldo h2 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.telasaldo h3 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.telasaldo p {
+    font-size: 50px;
+    color: #ffffff;
+    margin: 0px;
+}
+
+.entradas {
+    font-size: 20px;
+    color:#22ff00
+}
+
+.saidas {
+    font-size: 20px;
+    color: red;
+    padding: 10px;
+}
+
+.saldo {
+    margin: 20px;
+    margin-bottom: 0;
+}
+
+.iconsetabaixo,
+.iconsetacima {
+    color: inherit;
+    font-size: 15px;
+}
+
+.iconsetabaixo {
+    color: red;
+}
+
+.iconsetacima {
+    color: #22ff00
+}
+
+.iconuser {
+    font-size: 80px;
+    float: right;
+    margin: 0;
+}
+
+.btnuser {
+    font-size: 30px;
+    float: right;
+    padding-right: 20%;
+    padding-top: 5%;
+}
+
+.user p {
+    font-size: 30px;
+    float: right;
+    padding-right: 80%;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.user h2 {
+    font-size: 20px;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+/* Tela de finanças */
+.dashboard-financas {
+    background-color: #000000;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 50px 100px;
+    box-shadow: 0 2px 4px aqua;
+    align-content: center;
+}
+
+ h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+.box-financas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.box-financas p {
+    display: block;
+    text-align: center;
+}
+
+
+.financas,
+.poupanca,
+.investimentos,
+.cartao,
+.historicos {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.financas p,
+.poupanca p,
+.investimentos p,
+.cartao p,
+.historicos p {
+    margin-bottom: 20px;
+}
+
+/* ---------------------Botões */
+button {
+    color: aqua;
+    background: #000000;
+    font-size: 15px;
+    border-color: aqua;
+    border-radius: 20px;
+    padding: 8px;
+    cursor: pointer;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 100%;
+}
+  
+button:hover {
+    transition: 0.3s;
+    background-color: aqua;
+    color: #000000;
+    border-color: #000000;
+}
+
+
+/* Tela empréstimos */
+.dashboard-emprestimos {
+    background-color: #000000;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 50px 100px;
+    box-shadow: 0 2px 4px aqua;
+    align-content: center;
+    color: #ffffff;
+}
+
+ h2 {
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.box-emprestimos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.emprestimos,
+.dividendos,
+.emprestado,
+.rentabilidade,
+.emprestar {
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.emprestimos p,
+.dividendos p,
+.emprestado p,
+.rentabilidade p,
+.emprestar p {
+    margin-bottom: 20px;
+}
+
+/* Tela de Serviços */
+.dashboard-servicos {
+    background-color: #000000;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 10px 100px;
+    box-shadow: 0 2px 4px aqua;
+    align-content: center;
+    color: #ffffff;
+}
+
+ h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+    padding-left: 1px;
+}
+
+.dashboard-servicos{
+    display:grid;
+    justify-content: center;
+}
+
+.icones-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.icone-servico {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 35px;
+    cursor: pointer;
+}
+
+.icone-servico i {
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s, 
+    background-color 0.3s;
+    border-radius: 10px;
+}
+
+.icone-servico p {
+    color: #ffffff;
+    margin-top: 5px;
+    text-align: center;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    border-radius: 40px;
+}
+
+.icone-servico:hover i{
+    color:  aqua;
+}
+.icone-servico:hover p {
+    color: #000000;
+    background-color: aqua;
+}
+
+/* Tela de Rodapé */
+footer {
+    background-color: #000000;
+    padding: 20px 0;
+  }
+  
+.container {
+    max-width: 50%;
+    margin-left: 20%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bb-info {
+    flex: 0 0 40%;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.bb-nome,
+.bb-cnpj,
+.bb-address {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.social-icones i {
+    margin-top: 10px;
+    color: aqua;
+}
+
+
+.social-icones a {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.footer-links {
+    flex: 0 0 20%;
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    color: aqua;
+
+}
+
+ul {
+
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+ul li a {
+    cursor: pointer;
+}
+
+ul li a:hover {
+    font-weight: bold;
+}
+
+.footer-links a {
+color: #ffffff;
+}
